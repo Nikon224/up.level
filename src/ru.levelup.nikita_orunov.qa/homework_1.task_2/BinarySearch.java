@@ -2,34 +2,43 @@
  * Created by nikitaorunov on 18.11.17.
  */
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class BinarySearch {
     public static void main(String[] args) {
-        int counter, num, item, array[], first, last;
 
-        //Создаем объект Scanner для считывания чисел, введенных пользователем
         Scanner input = new Scanner(System.in);
         System.out.println("Введите количество элементов массива: ");
-        num = input.nextInt();
+        int num = input.nextInt();
 
         // Создаем массив введенного пользователем размера
+        int array[];
         array = new int[num];
 
-        System.out.println("Введите " + num + " чисел");
+        System.out.println("Массив = " + num + "");
 
         //Заполняем массив, вводя элементы в консоль
-        for (counter = 0; counter < num; counter++)
-            array[counter] = input.nextInt();
+        Random rand = new Random();
+       // for (counter = 0; counter < num; counter++)
+        for (int i = 0; i < num; i++) {
+            array[i] = (rand.nextInt(30));
+            System.out.println(  array[i]);
+        }
+
 
         // сортируем элементы массива, так как для бинарного поиска
         // элементы массива должны быть отсортированными
         Arrays.sort(array);
 
+        for (int i = 0; i < num; i++) {
+            System.out.println(i + ": " + array[i]);
+        }
+
         System.out.println("Введите элемент для бинарного поиска: ");
-        item = input.nextInt();
-        first = 0;
-        last = num - 1;
+        int item = input.nextInt();
+        int first = 0;
+        int last = num - 1;
 
         // метод принимает начальный и последний индекс, а также число для поиска
         binarySearch(array, first, last, item);

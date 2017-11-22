@@ -23,12 +23,11 @@ public class BubbleSort {
             for (int j = 1; j < (n - i); j++) {
 
                 if (numbers[j - 1] > numbers[j]) {
-                    //swap elements
+
                     temp = numbers[j - 1];
                     numbers[j - 1] = numbers[j];
                     numbers[j] = temp;
-                    System.out.println(temp);
-                    //System.out.println(numbers);
+
                 }
             }
         }
