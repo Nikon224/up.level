@@ -1,0 +1,78 @@
+package ru.levelup.nikita_orunov.qa.homework_1.task_4; /**
+ * Created by nikitaorunov on 28.11.2017.
+ */
+import java.lang.reflect.Array;
+import java.util.*;
+
+import org.apache.xpath.SourceTree;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+
+
+
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author timestamp <n.chufyrina@gmail.com>
+ */
+public class RtriangleTest {
+
+    public Rtriangle triangle = RtriangleProvider.getRtriangle();
+
+    public RtriangleTest() {
+    }
+
+    @BeforeClass
+    public static void setUpClass() {
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+    }
+
+    @Before
+    public void setUp() {
+    }
+
+    @After
+    public void tearDown() {
+    }
+
+    @Test
+    public void testTriangleShouldBeRectangular() {
+
+        // Считаем квадраты сторон
+        int a2 = (int) Math.pow((triangle.getApexX2() - triangle.getApexX1()), 2) + (int) Math.pow((triangle.getApexY2() - triangle.getApexY1()), 2);
+        int c2 = (int) Math.pow((triangle.getApexX3() - triangle.getApexX1()), 2) + (int) Math.pow((triangle.getApexY3() - triangle.getApexY1()), 2);
+        int b2 = (int) Math.pow((triangle.getApexX3() - triangle.getApexX2()), 2) + (int) Math.pow((triangle.getApexY3() - triangle.getApexY2()), 2);
+
+        // Выбираем наибольшую сторону, которая должна быть гипотенузой
+        int[] list = new int[3];
+        list[0] = a2;
+        list[1] = b2;
+        list[2] = c2;
+        System.out.println(" сторона a "+a2+ " сторона б "+b2+" сторона с "+c2);
+
+        Arrays.sort(list);
+
+        // Считаем сумму квадратов катетов
+        int sumSquaresCathetus = list[0] + list[1];
+        int squareHypotenuse = list[2];
+
+        if (squareHypotenuse == sumSquaresCathetus) {
+            System.out.println(" Я сделал это, честно списал и разобрался ");
+        }else {
+            System.out.println("Жизнь боль");
+        }
+
+
+        // Сравниваем сумму квадратов катетов и гипотенузы
+        assertEquals("Сумма квадратов катетов должна равняться квадрату гипотенузы", sumSquaresCathetus, squareHypotenuse);
+
+    }
+}

@@ -1,6 +1,7 @@
 /**
  * Created by nikitaorunov on 18.11.17.
  */
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
