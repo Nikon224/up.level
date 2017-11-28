@@ -8,10 +8,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- *
- * @author timestamp <n.chufyrina@gmail.com>
- */
+
 public class RtriangleTest {
 
     public Rtriangle triangle = RtriangleProvider.getRtriangle();
