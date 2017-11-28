@@ -1,18 +1,10 @@
 package ru.levelup.nikita_orunov.qa.homework_1.task_4; /**
  * Created by nikitaorunov on 28.11.2017.
  */
-import java.lang.reflect.Array;
+
 import java.util.*;
 
-import org.apache.xpath.SourceTree;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-
-
-
 
 import static org.junit.Assert.*;
 
@@ -38,7 +30,7 @@ public class RtriangleTest {
         list[0] = a2;
         list[1] = b2;
         list[2] = c2;
-        System.out.println(" сторона a "+a2+ " сторона б "+b2+" сторона с "+c2);
+        System.out.println(" сторона \"A\" = "+a2+ " сторона \"B\"= "+b2+" сторона \"C\" = "+c2);
 
         Arrays.sort(list);
 
