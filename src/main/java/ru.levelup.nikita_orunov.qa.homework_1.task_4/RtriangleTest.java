@@ -37,7 +37,7 @@ public class RtriangleTest {
         int squareHypotenuse = list[2];
 
         if (squareHypotenuse == sumSquaresCathetus) {
-            System.out.println(" Я сделал это, честно списал и разобрался ");
+            System.out.println(" Я сделал это, чуть коряво, но честно списал и разобрался )) ");
         }else {
             System.out.println("Жизнь боль");
         }

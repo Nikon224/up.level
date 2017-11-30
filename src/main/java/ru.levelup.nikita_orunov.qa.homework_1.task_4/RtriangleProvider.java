@@ -3,7 +3,7 @@ package ru.levelup.nikita_orunov.qa.homework_1.task_4;
 /**
  * Created by nikitaorunov on 28.11.2017.
  */
-public abstract class RtriangleProvider {
+public class RtriangleProvider {
 
     public static Rtriangle getRtriangle() {
 
