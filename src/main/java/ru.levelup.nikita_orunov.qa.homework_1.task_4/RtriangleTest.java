@@ -27,6 +27,7 @@ public class RtriangleTest {
         list[0] = a2;
         list[1] = b2;
         list[2] = c2;
+
         System.out.println(" сторона \"A\" = "+a2+ " сторона \"B\"= "+b2+" сторона \"C\" = "+c2);
 
         Arrays.sort(list);
